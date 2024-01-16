@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JSON</h2>
+    <h2>JavaScript Object Notation</h2>   
+    
+    <script>
+        const user = {id: 245, name: "Rejaul",
+        firendsAge: [12,45,56],
+        friends: ['kamal', 'jamal', 'amir', 'harun'],
+        lover: {
+            name: 'Jamila',
+            favFood: 'pizza'
+        }
+    }
+
+        const userJSON = JSON.stringify(user); // object k json data te convert kora
+        console.log(userJSON);
+        //{"id":245,"name":"Rejaul","firendsAge":[12,45,56]}
+
+        const userFromJSON = JSON.parse(userJSON);// json data k object a rupantor kora
+        console.log(userFromJSON);
+    </script>
+</body>
+</html>

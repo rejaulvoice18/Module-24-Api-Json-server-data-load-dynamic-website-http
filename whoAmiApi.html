@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="name">Name</h1>
+    <script>
+        function newName() {
+            fetch('https://api.openweathermap.org/data/2.5/weather?q=dhaka&appid=45e4999d29b488a90428b4fd64789c2b')
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    // const user = data.results[0];
+                    // const name = user.name;
+                    // const fullName = `${name.title} ${name.first} ${name.last}`
+                    // document.getElementById('name').innerText = fullName;
+                })
+        }
+        newName();
+        // setInterval(newName, 5000);
+        // function newName() {
+        //     fetch('https://randomuser.me/api/')
+        //         .then(res => res.json())
+        //         .then(data => {
+        //             const user = data.results[0];
+        //             const name = user.name;
+        //             const fullName = `${name.title} ${name.first} ${name.last}`
+        //             document.getElementById('name').innerText = fullName;
+        //         })
+        // }
+
+        // setInterval(newName, 5000);
+    </script>
+</body>
+
+</html>
